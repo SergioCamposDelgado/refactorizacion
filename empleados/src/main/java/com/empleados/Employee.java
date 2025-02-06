@@ -4,8 +4,8 @@ public class Employee {
 	protected Integer añosEmpresa;
 	protected String nombre;
 	
-	public Employee (int añosEmpresa , String nombre) {
-		if (añosEmpresa < 0) {
+	public Employee (String nombre, int añosEmpresa) {
+		if (añosEmpresa >= 0) {
 			this.añosEmpresa = añosEmpresa;
 		} else {
 			this.añosEmpresa = 0;

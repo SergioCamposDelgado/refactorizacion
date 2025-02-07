@@ -4,8 +4,8 @@ public class App
 {
     public static void main(String[] args) {
         EmployeeManager manager = new EmployeeManager();
-        manager.addEmployee("John Doe", 5);
-        manager.addEmployee("Jane Smith", 2);
-        manager.printEmployees();
+        manager.addEmployee(new Employee("John Doe", 5));
+        manager.addEmployee(new Employee("Jane Smith", 2));
+        System.out.print(manager);
     }
 }

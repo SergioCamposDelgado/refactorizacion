@@ -1,11 +1,34 @@
 package com.productos;
 
-import junit.framework.TestCase;
+import static org.junit.jupiter.api.Assertions.*;
 
-public class ProductoTest extends TestCase {
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
-	protected void setUp() throws Exception {
-		super.setUp();
+class ProductoTest {
+	Producto product;
+	
+	@BeforeEach
+	void setUp() throws Exception {
+		product = new Producto("Grafica", 350.0);
+	}
+	@DisplayName("ToString")
+	@Test
+	void test1() {
+		
+	}
+	
+	@DisplayName("listProduct")
+	@Test
+	void test2() {
+		
+	}
+	
+	@DisplayName("compareTo")
+	@Test
+	void test3() {
+		
 	}
 
 }

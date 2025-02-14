@@ -96,7 +96,9 @@ public class Producto implements Comparable<Producto>{
             System.out.println("Error en listProducts: " + e.getMessage());
         }
     } */
-
+	public void findProduct() {
+		
+	}
     
     
     /*

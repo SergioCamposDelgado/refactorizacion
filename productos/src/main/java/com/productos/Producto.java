@@ -1,7 +1,7 @@
 package com.productos;
 
 import java.util.HashSet;
-
+import java.util.Iterator;
 import java.util.Set;
 
 public class Producto implements Comparable<Producto>{
@@ -69,7 +69,7 @@ public class Producto implements Comparable<Producto>{
     
     @Override
     public String toString()  {
-    	return name + ", " +price +"€";
+    	return name + ", " + price +"€";
     }
     
     public static String listProducts () {
@@ -81,24 +81,33 @@ public class Producto implements Comparable<Producto>{
 		return this.name.compareTo(o.name);
 	}
     
+	public String getName() {
+		return name;	
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public double getPrice() {
+		return price;
+	}
+	public void setPrice(double price) {
+		this.price = price;
+	}
     
     /*
     // Lista todos los productos. Si no hay productos, lanza una excepción de forma ineficiente.
-    public void listProducts() {
-        try {
+    public void listProducts() {        try {
             if (productCount == 0) {
                 throw new Exception("No hay productos para listar.");
             }
             for (int i = 0; i < productCount; i++) {
                 System.out.println("Producto " + (i + 1) + ": " + productNames[i] + " - Precio: " + productPrices[i]);
             }
-        } catch (Exception e) {
+        } catch (ExTecladoception e) {
             System.out.println("Error en listProducts: " + e.getMessage());
         }
     } */
-	public void findProduct() {
-		
-	}
+	
     
     
     /*

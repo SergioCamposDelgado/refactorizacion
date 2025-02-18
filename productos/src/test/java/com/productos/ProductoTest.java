@@ -17,7 +17,7 @@ class ProductoTest {
 	
 	@DisplayName("ToString")
 	@Test
-	void test1() {
+	void testImprimirProducto() {
 		String resultadoEsperado = "Grafica" + ", " + "350.0" +"€";
 		String resultadoObtenido = product1.toString();
 		assertEquals(resultadoEsperado, resultadoObtenido);
@@ -26,11 +26,47 @@ class ProductoTest {
 	
 	@DisplayName("compareTo")
 	@Test
-	void test2() {
+	void testCompararProducto() {
 		int resultadoEsperado = product1.getName().compareTo(product2.getName());
 		int resultadoObtenido = product1.compareTo(product2);
 		assertEquals(resultadoEsperado, resultadoObtenido);
 	}
 	
-
+	
+	@DisplayName("getName")
+	@Test
+	void testGetName() {
+		String resultadoEsperado = "Procesador";
+		String resultadoObtenido = product2.getName();
+		assertEquals(resultadoEsperado, resultadoObtenido);
+	}
+	
+	
+	@DisplayName("setName")
+	@Test
+	void testSetName() {
+		product1.setName("Grafica");
+		String resultadoEsperado = "Grafica";
+		String resultadoObtenido = product1.name;
+		assertEquals(resultadoEsperado, resultadoObtenido);
+	}
+	
+	
+	@DisplayName("getPrice")
+	@Test
+	void testGetPrice() {
+		double resultadoEsperado = 350.0;
+		double resultadoObtenido = product1.getPrice();
+		assertEquals(resultadoEsperado, resultadoObtenido);
+	}
+	
+	
+	@DisplayName("setPrice")
+	@Test
+	void testSetPrice() {
+		product2.setPrice(90.0);
+		double resultadoEsperado = 90.0;
+		double resultadoObtenido = product2.price;
+		assertEquals(resultadoEsperado, resultadoObtenido);
+	}
 }

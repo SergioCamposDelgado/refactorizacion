@@ -3,8 +3,8 @@ package com.productos;
 public class Producto implements Comparable<Producto>{
 
 	
-	private String name;
-	private Double price;
+	protected String name;
+	protected Double price;
     
     public Producto (String name, Double price) throws Exception{
     	if (name == null || name.trim().isEmpty()) {

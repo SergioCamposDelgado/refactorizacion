@@ -3,6 +3,7 @@ package com.productos;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.productos.dao.ProductoDAO;
 import com.productos.service.ManagerProductosInterface;
 
 public class ManagerProductos implements ManagerProductosInterface{
@@ -33,6 +34,16 @@ public class ManagerProductos implements ManagerProductosInterface{
 	@Override
 	public void addProducto(Producto p) {
 	productos.add(p);
+	}
+
+	@Override
+	public void crearTabla() {
+		try {
+			ProductoDAO.crearTabla();
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 }

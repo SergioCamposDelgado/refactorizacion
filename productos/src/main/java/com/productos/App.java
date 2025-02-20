@@ -14,7 +14,8 @@ public class App
 {
     // Método main que mezcla la lógica de negocio con la presentación
     public static void main(String[] args) {
-    	managerProducto();
+    	ManagerProductosInterface gestor = new ManagerProductos();
+    	gestor.crearTabla();
     }
     
     public static void managerProducto() {

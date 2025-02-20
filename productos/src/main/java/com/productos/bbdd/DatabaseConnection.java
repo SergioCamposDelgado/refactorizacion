@@ -2,18 +2,25 @@ package com.productos.bbdd;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.SQLDataException;
 import java.sql.SQLException;
 
 public class DatabaseConnection {
 
 	protected static String URL = "jdbc:sqlite:/home/grecoxyt/Escritorio/Instituto/Entorno/refactorizacion/bbdd";
-	protected static Connection connection = null;
+	protected static Connection connection;
 
 	public DatabaseConnection() {
+	
 	}
 
-	public static Connection getConnection() {
+	
+	/**
+	 * Realiza la conexión a la base de datos
+	 * 
+	 * @return conexión a al base de datos
+	 * @throws ClassNotFoundException
+	 */
+	public static Connection getConnection() throws ClassNotFoundException {
 
 		if (connection == null) {
 			try {
@@ -28,13 +35,16 @@ public class DatabaseConnection {
 		return connection;
 	}
 	
+	
+	/**
+	 * Realiza la desconexión
+	 */
 	public static void closeConnection () {
 		if (connection != null) {
 			try {
 				connection.close();
 				connection = null;
-			}
-			catch (SQLException e) {
+			} catch (SQLException e) {
 				System.out.println(e.getMessage());
 			}
 		}

@@ -6,10 +6,15 @@ import java.util.List;
 import com.productos.service.ManagerProductosInterface;
 
 public class ManagerProductos implements ManagerProductosInterface{
-
-	protected List<Producto> productos = new ArrayList<Producto>();
+	
+	protected List<Producto> productos = new ArrayList<Producto>();//Crea la lista "productos"
 	
 	
+	/**
+	 * Encuentra un producto a traves del nombre
+	 * @param searchName: Es una cadena de texto que almacena el nombre que se quiere buscar
+	 * @return s: devuelve el indice del nombre que se esta buscando
+	 */
 	@Override
 	public int findProducto(String searchName) {
 		int s = -1;
@@ -21,6 +26,10 @@ public class ManagerProductos implements ManagerProductosInterface{
 		return s;
 	}
 
+	/**
+	 * Muestra la lista completa
+	 * @return s: cadena de texto que almacena el producto y lo devuelve
+	 */
 	@Override
 	public String listProducto() {
 		String s = "";
@@ -29,7 +38,11 @@ public class ManagerProductos implements ManagerProductosInterface{
 		}
 		return s;
 	}
-
+	
+	/**
+	 * Añade el producto a la lista
+	 * @param p: producto a añadir
+	 */
 	@Override
 	public void addProducto(Producto p) {
 	productos.add(p);

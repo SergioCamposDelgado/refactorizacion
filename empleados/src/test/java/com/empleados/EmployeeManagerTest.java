@@ -37,7 +37,7 @@ class EmployeeManagerTest {
 	}
 	
 	/**	
-	 * Test del metodo add
+	 * Test del metodo toString
 	 */
 	@DisplayName ("Añadir empleado")
 	@Test

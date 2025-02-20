@@ -15,18 +15,23 @@ class ProductoTest {
 		product2 = new Producto("Procesador", 90.0);
 	}
 	
+	/**
+	 * Prueba del toString
+	 */
 	@DisplayName("ToString")
 	@Test
-	void test1() {
+	void testToString() {
 		String resultadoEsperado = "Grafica" + ", " + "350.0" +"€";
 		String resultadoObtenido = product1.toString();
 		assertEquals(resultadoEsperado, resultadoObtenido);
 	}
 	
-	
+	/**
+	 * Prueba del compareTo
+	 */
 	@DisplayName("compareTo")
 	@Test
-	void test2() {
+	void testCompareTo() {
 		int resultadoEsperado = product1.getName().compareTo(product2.getName());
 		int resultadoObtenido = product1.compareTo(product2);
 		assertEquals(resultadoEsperado, resultadoObtenido);
